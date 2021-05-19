@@ -1,0 +1,10 @@
+<header>
+  <h1>{{ title }}</h1>
+  <!-- Pass in a color and the text for the button -->
+  <!-- Pass the props to the button class -->
+  <app-button *ngIf="hasRoute('/')"
+    color="{{showAddTask ? 'red' : 'green'}}"
+    text="{{showAddTask ? 'Close' : 'Add'}}"
+    (btnClick)="toggleAddTask()"
+  ></app-button>
+</header>
